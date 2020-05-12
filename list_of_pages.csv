@@ -1,0 +1,9 @@
+,"description","admin","ficha","produto","categoria","item de menu"
+"view","show single item",,,,,
+"list","table of all items",,,,,
+"add_form","HTML form",,,,,
+"add_exec","insert to DB",,,,,
+"edit_form","Pre-filled form",,,,,
+"edit_exec","update DB",,,,,
+"delete_confirm","HTML yes/no",,,,,
+"delete_exec","delete from DB",,,,,

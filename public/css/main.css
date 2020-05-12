@@ -1,0 +1,251 @@
+body { font-size: 12px; font-family: sans-serif; }
+
+/* Site built by Heitor Chang */
+
+/*
+
+.site_header, .site_sidebar, .site_body_container { border: 3px solid black; }
+  
+.site_content { border: 5px dashed blue; }
+
+*/
+
+.site_header {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    overflow: auto;
+    background: #FFFFFF;
+    /*
+    background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    left bottom,
+	    color-stop(0.85, #FFFFFF),
+	    color-stop(1, #A90102)
+    );
+    background-image: -o-linear-gradient(bottom, #FFFFFF 85%, #A90102 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 85%, #A90102 100%);
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 85%, #A90102 100%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 85%, #A90102 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 85%, #A90102 100%);
+    */
+}
+
+.site_header a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.site_body_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.site_logo {
+    position: relative;
+    float: left;
+}
+
+.site_banner {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
+.site_address {
+    position: relative;
+    float: left;
+    padding: 10px 10px 10px 50px;
+}
+
+.site_sidebar {
+    position: relative;
+    float: left;
+    height: 95%;
+/*    width: 20%; */
+    padding: 0;
+}
+
+.site_content {
+    position: relative;
+/*    float: left; */
+    padding: 0;
+    overflow: hidden;
+/*    width: 80%; */
+    margin-bottom: 30px;
+}
+
+.site_gallery {
+    padding: 0px 0px 0px 5px;
+    text-align: center;
+}
+
+.site_footer {
+    position: relative;
+    font-size: 10px;
+}
+
+.site_sidebar ul {
+    color: #006600;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.site_sidebar li {
+    background-color: #A90102;
+    /*
+    background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.75, #A90102),
+	    color-stop(1, #FFFFFF)
+    );
+    background-image: -o-linear-gradient(right bottom, #A90102 75%, #FFFFFF 100%);
+    background-image: -moz-linear-gradient(right bottom, #A90102 75%, #FFFFFF 100%);
+    background-image: -webkit-linear-gradient(right bottom, #A90102 75%, #FFFFFF 100%);
+    background-image: -ms-linear-gradient(top left, #A90102 75%, #FFFFFF 100%);
+    background-image: linear-gradient(to right bottom, #A90102 75%, #FFFFFF 100%);
+    */
+}
+
+/*
+.site_sidebar li {
+    background-color: #003012;
+    background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.75, #003012),
+	    color-stop(1, #00CC44)
+    );
+    background-image: -o-linear-gradient(right bottom, #003012 75%, #00CC44 100%);
+    background-image: -moz-linear-gradient(right bottom, #003012 75%, #00CC44 100%);
+    background-image: -webkit-linear-gradient(right bottom, #003012 75%, #00CC44 100%);
+    background-image: -ms-linear-gradient(top left, #003012 75%, #00CC44 100%);
+    background-image: linear-gradient(to right bottom, #003012 75%, #00CC44 100%);
+}
+*/
+
+.site_sidebar li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding: 3px 20px 3px 15px;
+    background: inherit;
+}
+
+.site_sidebar li a:hover {
+    color: #660000;
+    background-color: #FFFFFF;
+    
+    /*
+    background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.75, #FFFFFF),
+	    color-stop(1, #A90102)
+    );
+    background-image: -o-linear-gradient(right bottom, #FFFFFF 75%, #A90102 100%);
+    background-image: -moz-linear-gradient(right bottom, #FFFFFF 75%, #A90102 100%);
+    background-image: -webkit-linear-gradient(right bottom, #FFFFFF 75%, #A90102 100%);
+    background-image: -ms-linear-gradient(top left, #FFFFFF 75%, #A90102 100%);
+    background-image: linear-gradient(to right bottom, #FFFFFF 75%, #A90102 100%);
+    */
+}
+
+/*
+.site_sidebar li a:hover {
+    background-color: #70FF7A;
+    background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.75, #70FF7A),
+	    color-stop(1, #1AAD29)
+    );
+    background-image: -o-linear-gradient(right bottom, #70FF7A 75%, #1AAD29 100%);
+    background-image: -moz-linear-gradient(right bottom, #70FF7A 75%, #1AAD29 100%);
+    background-image: -webkit-linear-gradient(right bottom, #70FF7A 75%, #1AAD29 100%);
+    background-image: -ms-linear-gradient(top left, #70FF7A 75%, #1AAD29 100%);
+    background-image: linear-gradient(to right bottom, #70FF7A 75%, #1AAD29 100%);
+    color: #000000;
+}
+*/
+
+.banner_company_name {
+    font-size: 20px;
+    color: #A90102;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.map_block {
+    padding-left: 20px;
+}
+
+.map_address {
+    font-size: 16px;
+}
+
+.telefones {
+    font-size: 14px;
+    font-weight: bold;
+    font-decoration: none;
+}
+
+.telefones a {
+    color: #0066FF;
+}
+
+.back_to_top {
+    position: fixed;
+    height: 20px;
+    width: 100%;
+    bottom: 0px;
+    right: 15px;
+    text-align: right;
+}
+
+.back_to_top a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #A90102;
+    padding: 5px;
+}
+
+.carousel_container {
+    margin-left: 30px;
+    margin-top: 25px;
+    width: 650px;
+    height: 450px;
+}
+
+.carousel {
+    width: 600px;
+    height: 400px;
+}
+
+.printable_header {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.printable_header a {
+    text-decoration: none;
+}
+
+.site_content a {
+    color: #A90102;
+}
+
+.site_content a :visited {
+    color: #A90102;
+}

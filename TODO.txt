@@ -1,0 +1,55 @@
+Public scripts in v2/public/
+
+[OK] Fix unwanted jumping to top after page load:
+     remove "&&g.load(a.mobile.silentScroll)" from jquery.mobile.js
+
+[OK] Escape HTML in public facing pages (htmlspecialchars)
+
+[OK] lista.php - Bulk of site, linked to from menu. Uses ID of lista
+
+[OK] menu.php - generates menu, other pages should require this
+
+[OK] busca.php - normalize search query
+     use htmlspecialchars(normalizeChars($q))
+
+[OK] Paginate busca results
+
+[OK] mapa.php - embed Google Maps
+
+[OK] contact.php - Currently hardcoded, read from DB v2_ficha
+
+[OK] Reformat L x W x H dimensions to consistent output, add spaces
+     when LxWxH format is given (explode by 'x')
+
+[OK] index.php - Overview, just a splash image
+
+[no] produto.php - individual produto data
+
+[OK] inexistente.php - generic error page when bogus ids are given
+
+[OK] header.php
+     Leave a space in the header/banner for announcements and alerts
+
+[no] footer.php
+
+[OK] Add data-ajax="false" to a href links / mobileinit
+
+[no] CSRF token? [ Only for real authentication mechanism ]
+
+[no] reset password by sending email
+
+[OK] Generate ("install") tables if they do not exist
+
+[OK] Upload photos through PHP -- edit PHP settings?
+
+[OK] Ensure admin pages are using SSL
+
+[OK] Paginate produtos
+
+[OK] Produto edit: allow reupload of foto
+
+[OK] Produto edit: check if codigo was rewritten and overwrites another
+
+[no] Delete images on deleting product?
+
+[OK] Stronger .htaccess user (pontual) and password

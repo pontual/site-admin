@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Roboto', monospace;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.dbValue {
+    font-family: 'Droid', monospace;
+    color: #900;
+}
+
+ul.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+ul li.navbar-item {
+    float: left;
+    list-style-type: none;
+    background-color: #255;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+ul li.navbar-item:last-child {
+    float: none;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #255;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+li.navbar-item a:link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+li.navbar-item a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+li.navbar-item a:hover {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+li.navbar-item a:active {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}

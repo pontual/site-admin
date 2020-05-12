@@ -1,0 +1,3 @@
+DirectoryIndex index.php index.html
+AddHandler php7-script .php
+suPHP_ConfigPath /home/pontualimportbrinde1/

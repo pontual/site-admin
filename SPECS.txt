@@ -1,0 +1,164 @@
+==============
+DATA STRUCTURE
+==============
+
+The Main Menu, or sidebar's, top level has folders and individual links to a category (mugs, keychains, etc.).
+
+A category may have synonyms (mugs = cups), and a administrator should only need to update a single name out of the set of synonyms.
+
+A category's page has a grid of photos of a list of products.
+
+==============
+FILE STRUCTURE
+==============
+
+settings.php (define local or production variables)
+install.php (check if a table exists, if not, create it. use a function)
+delete_all.php (execute only if $DEBUG=true)
+
+* administrator_add_form.php
+* administrator_add_exec.php
+  administrator_edit_form.php
+  administrator_edit_exec.php
+
+  login_form.php
+  login_exec.php
+  logout.php
+
+  index.php (this file and all others following it need to require auth)
+
+  ficha_list.php
+* ficha_add_form.php (blank form)
+* ficha_add_exec.php (insert into DB)
+  ficha_edit_form.php (pre-filled form)
+  ficha_edit_exec.php (update DB)
+  ficha_delete_confirm.php (confirmation yes/no message)
+  ficha_delete_exec.php (delete from DB)
+
+  produto_view.php
+  produto_list.php
+  produto_add_form.php
+  produto_add_exec.php
+  produto_edit_form.php
+  produto_edit_exec.php
+  produto_delete_confirm.php 
+  produto_delete_exec.php
+ 
+  categoria_view.php
+  categoria_list.php
+  categoria_add_form.php
+  categoria_add_exec.php
+  categoria_edit_form.php
+  categoria_edit_exec.php
+  categoria_delete_exec.php
+
+  item_de_menu_view.php
+  item_de_menu_list.php
+  item_de_menu_add_form.php
+  item_de_menu_add_exec.php
+  item_de_menu_edit_form.php
+  item_de_menu_edit_exec.php
+  item_de_menu_delete_exec.php
+
+======
+TABLES
+======
+
+[updates should be done in order below]
+
+v2_administrador
+
+EMAIL [varchar(100)]
+SENHA (bcrypt varchar (see PHP docs)) (if "", redirect to page to make a password)
+
+v2_ficha
+
+  ID
+  RAZAO_SOCIAL
+  NOME_FANTASIA
+  SLOGAN
+  TELEFONE
+  ENDERECO
+  AVISO
+  ATIVO (1 or 0) radio button to select which ficha to use
+v2_produto
+
+  ID [int]
+  CODIGO [varchar(16)]
+  DESCRICAO [varchar(200)]
+  PESO [varchar(32)]
+  MEDIDAS [varchar(50)]
+  PRECO [varchar(16)] (codigo such as "060/200")
+
+v2_categoria
+  // editable container for list of produtos
+
+  ID [int]
+
+  NOME [varchar(80)]
+
+v2_produtos_de_categoria
+  // assign produtos to categoria
+  
+  ID_CATEGORIA [FK]
+
+  ID_PRODUTO [FK]
+
+v2_pasta_de_menu
+
+  ID [int]
+
+  NOME [varchar(80)]
+
+v2_link_de_menu
+
+  ID [int]
+  
+  ID_PASTA [FK]
+  
+  ID_CATEGORIA [FK]
+  
+  NOME [varchar(80)]
+
+
+==============
+AUTHENTICATION
+==============
+
+http://stackoverflow.com/questions/1243150/php-sessions-to-authenticate-user-on-login-form
+
+// setup session
+
+session_start();
+if( isset($_POST['username']) && isset($_POST['password']) )
+{
+    if( auth($_POST['username'], $_POST['password']) )
+    {
+        // auth okay, setup session
+        $_SESSION['user'] = $_POST['username'];
+        // redirect to required page
+        header( "Location: index.php" );
+     } else {
+        // didn't auth go back to login
+        header( "Location: login.html" );
+     }
+ } else {
+     // username and password not given so go back to login
+     header( "Location: login.html" );
+ }
+
+// For secure pages
+
+session_start();
+// session_regenerate_id();  // MY NOTE: not sure if it is useful
+if(!isset($_SESSION['user']))      // if there is no valid session
+{
+    header("Location: login.html");
+}
+
+// Logout
+
+session_start();
+unset($_SESSION['user']);
+session_destroy();
+header("Location: login.html");
