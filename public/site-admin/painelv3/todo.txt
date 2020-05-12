@@ -3,7 +3,7 @@
 categoria   OK   |  OK  |   OK   |   OK
 produto     OK   |  OK  |   OK   |   OK
 
-[  ] change /adm redirect
+[NO] change /adm redirect (NO: keep old pages alive)
 [OK] tabela upload
 [OK] deleting produto removes produto_categoria links
 [OK] deleting categoria removes produto_cat links but does not remove produto
@@ -11,4 +11,4 @@ produto     OK   |  OK  |   OK   |   OK
 [OK] show produtos on categoria form
 [OK] normalizado
 [  ] mini form in categoria_form to add codigo to a categoria
-[  ] button in categoria_form list of products to remove product from categoria
+[  ] novidades subsection checks for novidades category and allows bulk edit
